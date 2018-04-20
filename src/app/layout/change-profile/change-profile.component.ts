@@ -85,7 +85,6 @@ export class ChangeProfileComponent implements OnInit {
   }
   saveChangesBtn() {
     console.log('saveChangesBtn!!');
-    //console.log(document.getElementById('inputFirstName').);
     /*document.getElementById('inputConfession').removeAttribute('disabled');
     document.getElementById('inputGender').removeAttribute('disabled');
     document.getElementById('inputLanguage').removeAttribute('disabled');
