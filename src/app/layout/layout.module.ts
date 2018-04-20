@@ -9,6 +9,7 @@ import {MenuComponent} from '../shared/components/menu/menu.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
 import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ChangeProfileComponent} from './change-profile/change-profile.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MenuComponent,
     WellcomePageComponent,
     EventListPageComponent,
-    FillProfileComponent]
+    FillProfileComponent,
+    ChangeProfileComponent]
 })
 
 export class LayoutModule {}

@@ -1,0 +1,127 @@
+<p>
+  user-profile-page works!
+</p>
+<br>
+<div class="container">
+  <div class="row alignVertical">
+    <div class="col-10 col-lg-1 order-1 order-lg-1">
+      <img src="../../../assets/images/Logo.png" class="img-responsive">
+    </div>
+    <div class="col-12 col-lg-10 order-3 order-lg-2">
+      <h1 class="alignGorisontal">Profile</h1>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="alignGorisontal">
+  <button class="btn btn-primary" (click)="changeProfileBtn()" id="changeBtn">Change</button>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <div class="row">
+
+          <div class="col-sm-12 col-lg-4">
+            <h4 class="alignGorisontal">Personal information</h4>
+            <div class="form-group">
+              <label for="inputFirstName">First name</label>
+              <input type="text" class="form-control" id="inputFirstName" placeholder="{{userProfile.firstName}}" [disabled]="true">
+            </div>
+            <div class="form-group">
+              <label for="inputLastName">Last name</label>
+              <input type="text" class="form-control" id="inputLastName" placeholder="{{userProfile.lastName}}" [disabled]="true">
+            </div>
+            <div class="form-group">
+              <label for="inputPhoneNumber">Phone number</label>
+              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="{{userProfile.phoneNumber}}" [disabled]="true">
+            </div>
+
+            <div class="form-group">
+              <label for="inputConfession">Confession</label>
+              <select name="confession" id="inputConfession" [disabled]="true">
+                <option disabled>{{userProfile.confession}}</option>
+                <option *ngFor="let mConfession of static.confession" [value] = "mConfession">{{mConfession}}</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label for="inputGender">Gender</label>
+              <select name="gender" id="inputGender" [disabled]="true">
+                <option disabled>{{userProfile.gender}}</option>
+                <option *ngFor="let mGender of static.gender" [value] = "mGender">{{mGender}}</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <div class="col-sm-12 col-lg-4">
+            <h4 class="alignGorisontal">About myself</h4>
+            <div class="form-group">
+              <label for="inputMaritalStatus">Marital status</label>
+              <select name="maritalStatus" id="inputMaritalStatus" [disabled]="true">
+                <option disabled>{{userProfile.maritalStatus}}</option>
+                <option *ngFor="let mStatus of static.gender" [value] = "mStatus">{{mStatus}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="inputFoodPreferences">Food preferences</label>
+              <select name="foodPreferences" id="inputFoodPreferences" [disabled]="true">
+                <option disabled>{{userProfile.foodPreferences}}</option>
+                <option *ngFor="let mFoodPref of static.foodPreferences" [value] = "mFoodPref">{{mFoodPref}}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="inputFoodPreferences">Languages</label>
+              <select multiple name="languages" id="inputLanguage" [disabled]="true" size="1">
+                <option disabled>{{userProfile.languages}}</option>
+                <option *ngFor="let mLanguage of static.languages" [value] = "mLanguage">{{mLanguage}}</option>
+              </select>
+            </div>
+
+
+            <div class="row">
+              <div class="form-group col">
+                <label for="inputAllergy">Description</label>
+                <textarea class="form-control"  rows="6" id="inputAllergy" [disabled]="true" placeholder="{{userProfile.description}}"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="alignGorisontal">
+              <img
+                src="https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+                class="img-responsive rounded-circle"
+                height="300vh"
+              >
+            </div>
+            <h3 class="text-center" (click)="changeUserProfilePictureBtn()">Change picture</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="alignGorisontal" *ngIf="a">
+          <button type="submit" class="btn btn-primary " (click)="saveChangesBtn()">Save</button>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
